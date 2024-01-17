@@ -64,7 +64,7 @@ $align-items: (
     }
 }
 
-$width: 343, 136;
+$width: 343, 136, 116, 106, 102;
 
 @each $width in $width {
     .w-#{$width} {
@@ -72,7 +72,7 @@ $width: 343, 136;
     }
 }
 
-$height: 48, 26;
+$height: 26, 48;
 
 @each $height in $height {
     .h-#{$height} {
@@ -85,6 +85,22 @@ $padding-bottom: 16, 24, 48;
 @each $pb in $padding-bottom {
     .pb-#{$pb} {
         padding-bottom: #{$pb}px;
+    }
+}
+
+$padding-right: 14, 16, 17;
+
+@each $pr in $padding-right {
+    .pr-#{$pr} {
+        padding-right: #{$pr}px;
+    }
+}
+
+$padding-left: 1, 3;
+
+@each $pl in $padding-left {
+    .pl-#{$pl} {
+        padding-left: #{$pl}px;
     }
 }
 
@@ -132,6 +148,17 @@ $padding-bottom: 16, 24, 48;
         letter-spacing: -0.22px;
         font-weight: bold;
     }
+
+    &-sb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 195px;
+        height: 42px;
+
+        border: 1.5px solid var(--medium-grey);
+        border-radius: 14px;
+    }
 }
 
 // Core css
@@ -155,8 +182,6 @@ body {
 
     margin: 16px 16px 24px 16px;
     height: 35px;
-
-    // background-color: orange;
 }
 
 .banner {
@@ -192,18 +217,64 @@ body {
     background-color: var(--white);
 }
 
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 78px 117px 32px 24px;
+    gap: 16px;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 16px;
+    width: 119px;
+    padding: 8px 0px 8px 23px;
+}
+
+.features-list>section {
+    display: flex;
+    flex-direction: row;
+}
+
+.todo-list {
+    padding-right: 15.5px;
+}
+
+.company-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 2px 0px 8px 24px;
+}
+
+
+.features-list>section>img {
+    height: 20px;
+}
+
+.close-menu-button {
+    position: fixed;
+    top: 21.98px;
+    right: 19.98px;
+}
+
 .databiz {
     width: 81.25px;
     height: 14.36px;
 }
+
 .audiophile {
     height: 26px;
     width: 52.87px;
 }
+
 .meet {
     height: 14.36px;
     width: 64.14px;
 }
+
 .maker {
     height: 17.23px;
     width: 58.9px;

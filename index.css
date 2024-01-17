@@ -72,12 +72,24 @@
   width: 136px;
 }
 
-.h-48 {
-  height: 48px;
+.w-116 {
+  width: 116px;
+}
+
+.w-106 {
+  width: 106px;
+}
+
+.w-102 {
+  width: 102px;
 }
 
 .h-26 {
   height: 26px;
+}
+
+.h-48 {
+  height: 48px;
 }
 
 .pb-16 {
@@ -90,6 +102,26 @@
 
 .pb-48 {
   padding-bottom: 48px;
+}
+
+.pr-14 {
+  padding-right: 14px;
+}
+
+.pr-16 {
+  padding-right: 16px;
+}
+
+.pr-17 {
+  padding-right: 17px;
+}
+
+.pl-1 {
+  padding-left: 1px;
+}
+
+.pl-3 {
+  padding-left: 3px;
 }
 
 .font-h {
@@ -128,6 +160,15 @@
   line-height: 26px;
   letter-spacing: -0.22px;
   font-weight: bold;
+}
+.button-sb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 195px;
+  height: 42px;
+  border: 1.5px solid var(--medium-grey);
+  border-radius: 14px;
 }
 
 body {
@@ -181,6 +222,48 @@ body {
   width: 240px;
   height: 100vh;
   background-color: var(--white);
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 78px 117px 32px 24px;
+  gap: 16px;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 16px;
+  width: 119px;
+  padding: 8px 0px 8px 23px;
+}
+
+.features-list > section {
+  display: flex;
+  flex-direction: row;
+}
+
+.todo-list {
+  padding-right: 15.5px;
+}
+
+.company-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 2px 0px 8px 24px;
+}
+
+.features-list > section > img {
+  height: 20px;
+}
+
+.close-menu-button {
+  position: fixed;
+  top: 21.98px;
+  right: 19.98px;
 }
 
 .databiz {

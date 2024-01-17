@@ -58,67 +58,65 @@
 
     <div id="mobile-sidebar" class="overlay invisible">
       <div class="sidebar">
-        <div id="close-menu-button">
+        <div id="close-menu-button" class="jc-e close-menu-button">
           <img src="images/icon-close-menu.svg">
         </div>
-        <div>
-          <section>
-            Features
-            <img class="invisible" src="images/icon-arrow-down.svg">
-            <img src="images/icon-arrow-up.svg">
-
+        <div class="sidebar-menu">
+          <section id="features-button" class="fd-r">
+            <aside class="pr-17">
+              Features
+            </aside>
+            <aside>
+              <img id="open-features" src="images/icon-arrow-down.svg">
+              <img id="close-features" class="invisible" src="images/icon-arrow-up.svg">
+            </aside>
           </section>
-          <section>
-            <section><img src="images/icon-todo.svg">Todo List</section>
-            <section><img src="images/icon-calendar.svg">Calendar</section>
-            <section><img src="images/icon-reminders.svg"> Reminders</section>
-            <section><img src="images/icon-planning.svg">Planning</section>
+          <section id="features-list" class="invisible features-list">
+            <section class="w-106 pl-1">
+              <img class="todo-list" src="images/icon-todo.svg">
+              <aside> Todo List </aside>
+            </section>
+            <section class="w-106">
+              <img class="pr-14" src="images/icon-calendar.svg">
+              <aside> Calendar </aside>
+            </section>
+            <section class="w-116 pl-3">
+              <img class="pr-16" src="images/icon-reminders.svg">
+              <aside> Reminders </aside>
+            </section>
+            <section class="w-102">
+              <img class="pr-14" src="images/icon-planning.svg">
+              <aside> Planning </aside>
+            </section>
           </section>
-        </div>
-        <div>
-          <section>
-            Company
-            <img class="invisible" src="images/icon-arrow-down.svg">
-            <img src="images/icon-arrow-up.svg">
+          <section id="company-button" class="fd-r">
+            <aside class="pr-16">
+              Company
+            </aside>
+            <aside>
+              <img id="open-company" src="images/icon-arrow-down.svg">
+              <img id="close-company" class="invisible" src="images/icon-arrow-up.svg">
+            </aside>
           </section>
-          <section>
+          <section id="company-list" class="invisible company-list" class="invisible">
             <section>History</section>
             <section>Our Team</section>
             <section>Blog</section>
           </section>
-        </div>
-        <div>
           <section>
             Careers
           </section>
-        </div>
-        <div>
           <section>
             About
           </section>
         </div>
-        <div>
-          <section>Login</section>
-          <section>Register</section>
+        <div class="fd-c ai-c">
+          <section class="pb-16">Login</section>
+          <section class="button-sb"> Register </section>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes,
-  create team rituals, and watch productivity soar.
-
-  Learn more -->
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
@@ -131,6 +129,16 @@
     const mobileMain = document.getElementById('mobile-main')
     const mobileSidebar = document.getElementById('mobile-sidebar')
 
+    const featuresList = document.getElementById('features-list')
+    const featuresButton = document.getElementById('features-button')
+    const openFeatures = document.getElementById('open-features')
+    const closeFeatures = document.getElementById('close-features')
+
+    const companyList = document.getElementById('company-list')
+    const companyButton = document.getElementById("company-button")
+    const openCompany = document.getElementById('open-company')
+    const closeCompany = document.getElementById('close-company')
+
     openMenu.addEventListener("click", () => {
       mobileSidebar.classList.remove('invisible')
     })
@@ -139,9 +147,31 @@
       mobileSidebar.classList.add('invisible')
     })
 
-    if (openMenu) {
+    featuresButton.addEventListener('click', () => {
+      if(featuresList.classList.contains("invisible")) {
+        featuresList.classList.remove('invisible')
+        openFeatures.classList.add('invisible')
+        closeFeatures.classList.remove('invisible')
+      } else {
+        featuresList.classList.add('invisible')
+        openFeatures.classList.remove('invisible')
+        closeFeatures.classList.add('invisible')
+      }
+    })
 
-    }
+    companyButton.addEventListener('click', () => {
+      if(companyList.classList.contains("invisible")) {
+        companyList.classList.remove('invisible')
+        openCompany.classList.add('invisible')
+        closeCompany.classList.remove('invisible')
+      } else {
+        companyList.classList.add('invisible')
+        openCompany.classList.remove('invisible')
+        closeCompany.classList.add('invisible')
+
+      }
+    })
+
   </script>
 </body>
 
