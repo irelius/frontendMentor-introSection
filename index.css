@@ -1,0 +1,233 @@
+:root {
+  --almost-white: #FAFAFA;
+  --light-grey: #ADADAD;
+  --medium-grey: #686868;
+  --black: #151515;
+  --blue: #726CEE;
+  --turquoise: #4BB1DA;
+  --yellow: #EDD556;
+  --purple: #8E4CB6;
+  --white: #FFFFFF;
+  --343: 343px;
+  --80: 80px;
+  --28: 28px;
+  --26: 26px;
+  --18: 18px;
+  --16: 16px;
+  --14: 14px;
+  --medium: 400;
+  --bold: 700;
+}
+
+.fd-r {
+  display: flex;
+  flex-direction: row;
+}
+
+.fd-c {
+  display: flex;
+  flex-direction: column;
+}
+
+.jc-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.jc-c {
+  display: flex;
+  justify-content: center;
+}
+
+.jc-s {
+  display: flex;
+  justify-content: start;
+}
+
+.jc-e {
+  display: flex;
+  justify-content: end;
+}
+
+.ai-c {
+  display: flex;
+  align-items: center;
+}
+
+.ai-s {
+  display: flex;
+  align-items: start;
+}
+
+.ai-e {
+  display: flex;
+  align-items: end;
+}
+
+.w-343 {
+  width: 343px;
+}
+
+.w-136 {
+  width: 136px;
+}
+
+.h-48 {
+  height: 48px;
+}
+
+.h-26 {
+  height: 26px;
+}
+
+.pb-16 {
+  padding-bottom: 16px;
+}
+
+.pb-24 {
+  padding-bottom: 24px;
+}
+
+.pb-48 {
+  padding-bottom: 48px;
+}
+
+.font-h {
+  font-size: var(--80);
+  line-height: 1;
+  font-weight: var(--bold);
+}
+.font-bm {
+  font-size: var(--18);
+  line-height: var(--28);
+  font-weight: var(--medium);
+}
+.font-bs {
+  font-size: var(--14);
+  line-height: var(--16);
+  font-weight: var(--medium);
+}
+.font-button {
+  font-size: var(--18);
+  line-height: var(--28);
+  font-weight: var(--bold);
+}
+.font-mh {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 42px;
+  letter-spacing: -0.5px;
+  color: var(--black);
+}
+
+.button-b {
+  border-radius: 15px;
+  background-color: black;
+  color: var(--almost-white);
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.22px;
+  font-weight: bold;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  font-size: var(--16);
+  line-height: var(--26);
+  font-weight: var(--medium);
+  color: var(--medium-grey);
+}
+
+.base {
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 16px 24px 16px;
+  height: 35px;
+}
+
+.banner {
+  height: 281.25px;
+  width: 375px;
+  margin-bottom: 47.75px;
+}
+
+.footer {
+  padding: 0px 16px 0px 16px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 240px;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+.databiz {
+  width: 81.25px;
+  height: 14.36px;
+}
+
+.audiophile {
+  height: 26px;
+  width: 52.87px;
+}
+
+.meet {
+  height: 14.36px;
+  width: 64.14px;
+}
+
+.maker {
+  height: 17.23px;
+  width: 58.9px;
+}
+
+.invisible {
+  display: none;
+}
+
+.textalign-c {
+  text-align: center;
+}
+
+.booba {
+  background-color: orange;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  justify-content: center;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*# sourceMappingURL=index.css.map */

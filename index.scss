@@ -1,0 +1,244 @@
+// Template
+:root {
+    --almost-white: #FAFAFA;
+    --light-grey: #ADADAD;
+    --medium-grey: #686868;
+    --black: #151515;
+    --blue: #726CEE;
+    --turquoise: #4BB1DA;
+    --yellow: #EDD556;
+    --purple: #8E4CB6;
+    --white: #FFFFFF;
+
+    --343: 343px;
+    --80: 80px;
+    --28: 28px;
+    --26: 26px;
+    --18: 18px;
+    --16: 16px;
+    --14: 14px;
+
+    --medium: 400;
+    --bold: 700;
+}
+
+// Flex directions
+$flex-directions: (
+    "r": "row",
+    "c": "column",
+);
+
+@each $key, $value in $flex-directions {
+    .fd-#{$key} {
+        display: flex;
+        flex-direction: #{$value};
+    }
+}
+
+// justify contents
+$justify-contents: (
+    "sb": "space-between",
+    "c": "center",
+    "s": "start",
+    "e": "end"
+);
+
+@each $key, $value in $justify-contents {
+    .jc-#{$key} {
+        display: flex;
+        justify-content: #{$value};
+    }
+}
+
+// align items
+$align-items: (
+    "c": "center",
+    "s": "start",
+    "e": "end"
+);
+
+@each $key, $value in $align-items {
+    .ai-#{$key} {
+        display: flex;
+        align-items: #{$value};
+    }
+}
+
+$width: 343, 136;
+
+@each $width in $width {
+    .w-#{$width} {
+        width: #{$width}px;
+    }
+}
+
+$height: 48, 26;
+
+@each $height in $height {
+    .h-#{$height} {
+        height: #{$height}px;
+    }
+}
+
+$padding-bottom: 16, 24, 48;
+
+@each $pb in $padding-bottom {
+    .pb-#{$pb} {
+        padding-bottom: #{$pb}px;
+    }
+}
+
+.font {
+    &-h {
+        font-size: var(--80);
+        line-height: 1;
+        font-weight: var(--bold);
+    }
+
+    &-bm {
+        font-size: var(--18);
+        line-height: var(--28);
+        font-weight: var(--medium);
+    }
+
+    &-bs {
+        font-size: var(--14);
+        line-height: var(--16);
+        font-weight: var(--medium);
+    }
+
+    &-button {
+        font-size: var(--18);
+        line-height: var(--28);
+        font-weight: var(--bold);
+    }
+
+    &-mh {
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 42px;
+        letter-spacing: -0.5px;
+        color: var(--black);
+    }
+}
+
+.button {
+    &-b {
+        border-radius: 15px;
+        background-color: black;
+        color: var(--almost-white);
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.22px;
+        font-weight: bold;
+    }
+}
+
+// Core css
+body {
+    font-family: "Epilogue", sans-serif;
+    font-size: var(--16);
+    line-height: var(--26);
+    font-weight: var(--medium);
+    color: var(--medium-grey);
+}
+
+.base {
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 16px 16px 24px 16px;
+    height: 35px;
+
+    // background-color: orange;
+}
+
+.banner {
+    height: 281.25px;
+    width: 375px;
+    margin-bottom: 47.75px;
+}
+
+.footer {
+    padding: 0px 16px 0px 16px;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 240px;
+    height: 100vh;
+    background-color: var(--white);
+}
+
+.databiz {
+    width: 81.25px;
+    height: 14.36px;
+}
+.audiophile {
+    height: 26px;
+    width: 52.87px;
+}
+.meet {
+    height: 14.36px;
+    width: 64.14px;
+}
+.maker {
+    height: 17.23px;
+    width: 58.9px;
+}
+
+// standards
+.invisible {
+    display: none;
+}
+
+.textalign {
+    &-c {
+        text-align: center;
+    }
+}
+
+// test background css
+.booba {
+    background-color: orange;
+}
+
+
+
+// Default Frontend mentor CSS
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    justify-content: center;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

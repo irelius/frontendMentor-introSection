@@ -1,22 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
+  <link href="reset.css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
 
-  Features
+<body>
+  <div class="base">
+    <div id="mobile-main">
+      <div class="nav">
+        <section class="ai-c">
+          <img src="images/logo.svg">
+        </section>
+        <section class="ai-c" id="open-menu-button">
+          <img src="images/icon-menu.svg">
+        </section>
+      </div>
+      <div class="banner">
+        <img src="images/image-hero-mobile.png">
+      </div>
+      <div class="jc-c pb-48">
+        <div class="w-343">
+          <section class="jc-c font-mh pb-16">
+            Make remote work
+          </section>
+          <section class="jc-c textalign-c pb-24">
+            Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
+            productivity soar.
+          </section>
+          <section class="jc-c">
+            <button class="jc-c ai-c h-48 w-136 button-b">Learn more</button>
+          </section>
+        </div>
+      </div>
+      <div class="fd-r jc-sb h-26 footer">
+        <img class="databiz" src="images/client-databiz.svg">
+        <img class="audiophile" src="images/client-audiophile.svg">
+        <img class="meet" src="images/client-meet.svg">
+        <img class="maker" src="images/client-maker.svg">
+      </div>
+    </div>
+
+    <div id="mobile-sidebar" class="overlay invisible">
+      <div class="sidebar">
+        <div id="close-menu-button">
+          <img src="images/icon-close-menu.svg">
+        </div>
+        <div>
+          <section>
+            Features
+            <img class="invisible" src="images/icon-arrow-down.svg">
+            <img src="images/icon-arrow-up.svg">
+
+          </section>
+          <section>
+            <section><img src="images/icon-todo.svg">Todo List</section>
+            <section><img src="images/icon-calendar.svg">Calendar</section>
+            <section><img src="images/icon-reminders.svg"> Reminders</section>
+            <section><img src="images/icon-planning.svg">Planning</section>
+          </section>
+        </div>
+        <div>
+          <section>
+            Company
+            <img class="invisible" src="images/icon-arrow-down.svg">
+            <img src="images/icon-arrow-up.svg">
+          </section>
+          <section>
+            <section>History</section>
+            <section>Our Team</section>
+            <section>Blog</section>
+          </section>
+        </div>
+        <div>
+          <section>
+            Careers
+          </section>
+        </div>
+        <div>
+          <section>
+            About
+          </section>
+        </div>
+        <div>
+          <section>Login</section>
+          <section>Register</section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features
   Company
   Careers
   About
@@ -26,14 +115,34 @@
 
   Make remote work
 
-  Get your team in sync, no matter your location. Streamline processes, 
+  Get your team in sync, no matter your location. Streamline processes,
   create team rituals, and watch productivity soar.
 
-  Learn more
-  
+  Learn more -->
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a target="_blank" href="https://samuelbae.netlify.app">Samuel Bae</a>.
   </div>
+
+  <script>
+    const openMenu = document.getElementById('open-menu-button')
+    const closeMenu = document.getElementById('close-menu-button')
+    const mobileMain = document.getElementById('mobile-main')
+    const mobileSidebar = document.getElementById('mobile-sidebar')
+
+    openMenu.addEventListener("click", () => {
+      mobileSidebar.classList.remove('invisible')
+    })
+
+    closeMenu.addEventListener('click', () => {
+      mobileSidebar.classList.add('invisible')
+    })
+
+    if (openMenu) {
+
+    }
+  </script>
 </body>
+
 </html>
