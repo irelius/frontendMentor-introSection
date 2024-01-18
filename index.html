@@ -2,177 +2,281 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- displays site properly based on user's device -->
 
-  <link href="reset.css" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
-  <link href="index.css" rel="stylesheet">
+   <link href="reset.css" rel="stylesheet">
+   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+   <link href="index.css" rel="stylesheet">
 
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-  </style>
+   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+   <style>
+   </style>
 </head>
 
 <body>
-  <div class="base">
-    <div id="mobile-main">
-      <div class="nav">
-        <section class="ai-c">
-          <img src="images/logo.svg">
-        </section>
-        <section class="ai-c" id="open-menu-button">
-          <img src="images/icon-menu.svg">
-        </section>
-      </div>
-      <div class="banner">
-        <img src="images/image-hero-mobile.png">
-      </div>
-      <div class="jc-c pb-48">
-        <div class="w-343">
-          <section class="jc-c font-mh pb-16">
-            Make remote work
-          </section>
-          <section class="jc-c textalign-c pb-24">
-            Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch
-            productivity soar.
-          </section>
-          <section class="jc-c">
-            <button class="jc-c ai-c h-48 w-136 button-b">Learn more</button>
-          </section>
-        </div>
-      </div>
-      <div class="fd-r jc-sb h-26 footer">
-        <img class="databiz" src="images/client-databiz.svg">
-        <img class="audiophile" src="images/client-audiophile.svg">
-        <img class="meet" src="images/client-meet.svg">
-        <img class="maker" src="images/client-maker.svg">
-      </div>
-    </div>
-
-    <div id="mobile-sidebar" class="overlay invisible">
-      <div class="sidebar">
-        <div id="close-menu-button" class="jc-e close-menu-button">
-          <img src="images/icon-close-menu.svg">
-        </div>
-        <div class="sidebar-menu">
-          <section id="features-button" class="fd-r">
-            <aside class="pr-17">
-              Features
+   <div class="base">
+      <div class="nav fd-r jc-sb">
+         <div class="nav-header jc-sb">
+            <aside class="fd-r ai-c font-bs">
+               <aside class="ai-c logo">
+                  <img src="images/logo.svg">
+               </aside>
+               <aside class="fd-r nav-options display-lg">
+                  <aside id="features-button-desktop" class="fd-r pt-34 pointer">
+                     <aside class="pr-9">
+                        Features
+                     </aside>
+                     <aside>
+                        <img id="open-features-desktop" class="" src="images/icon-arrow-down.svg">
+                        <img id="close-features-desktop" class="invisible" src="images/icon-arrow-up.svg">
+                     </aside>
+                  </aside>
+                  <section id="features-list-desktop" class="ai-c jc-c invisible features-list-desktop drop-shadow">
+                     <div class="fd-c jc-c features-list-spacer">
+                        <section class="fd-r jc-c w-93">
+                           <img class="pr-15" src="images/icon-todo.svg">
+                           <aside> Todo List </aside>
+                        </section>
+                        <section class="fd-r jc-c w-93">
+                           <img class="pr-14" src="images/icon-calendar.svg">
+                           <aside> Calendar </aside>
+                        </section>
+                        <section class="fd-r jc-c w-103">
+                           <img class="pr-15" src="images/icon-reminders.svg">
+                           <aside> Reminders </aside>
+                        </section>
+                        <section class="fd-r jc-c w-89">
+                           <img class="pr-14" src="images/icon-planning.svg">
+                           <aside> Planning </aside>
+                        </section>
+                     </div>
+                  </section>
+                  <aside id="company-button-desktop" class="fd-r pt-34 pointer">
+                     <aside class="pr-8">
+                        Company
+                     </aside>
+                     <aside>
+                        <img id="open-company-desktop" src="images/icon-arrow-down.svg">
+                        <img id="close-company-desktop" class="invisible" src="images/icon-arrow-up.svg">
+                     </aside>
+                  </aside>
+                  <section id="company-list-desktop" class="ai-c drop-shadow invisible company-list-desktop">
+                     <div class="fd-c jc-c company-list-spacer">
+                        <section>History</section>
+                        <section>Our Team</section>
+                        <section>Blog</section>
+                     </div>
+                  </section>
+                  <aside class="pt-34 pointer">Careers</aside>
+                  <aside class="pt-34 pointer">About</aside>
+               </aside>
             </aside>
-            <aside>
-              <img id="open-features" src="images/icon-arrow-down.svg">
-              <img id="close-features" class="invisible" src="images/icon-arrow-up.svg">
+
+            <aside class="fd-r ai-c display-lg font-bs pt-21">
+               <aside class="pointer">
+                  Login
+               </aside>
+               <aside class="button-sb pointer button-pointer">
+                  Register
+               </aside>
             </aside>
-          </section>
-          <section id="features-list" class="invisible features-list">
-            <section class="w-106 pl-1">
-              <img class="todo-list" src="images/icon-todo.svg">
-              <aside> Todo List </aside>
-            </section>
-            <section class="w-106">
-              <img class="pr-14" src="images/icon-calendar.svg">
-              <aside> Calendar </aside>
-            </section>
-            <section class="w-116 pl-3">
-              <img class="pr-16" src="images/icon-reminders.svg">
-              <aside> Reminders </aside>
-            </section>
-            <section class="w-102">
-              <img class="pr-14" src="images/icon-planning.svg">
-              <aside> Planning </aside>
-            </section>
-          </section>
-          <section id="company-button" class="fd-r">
-            <aside class="pr-16">
-              Company
-            </aside>
-            <aside>
-              <img id="open-company" src="images/icon-arrow-down.svg">
-              <img id="close-company" class="invisible" src="images/icon-arrow-up.svg">
-            </aside>
-          </section>
-          <section id="company-list" class="invisible company-list" class="invisible">
-            <section>History</section>
-            <section>Our Team</section>
-            <section>Blog</section>
-          </section>
-          <section>
-            Careers
-          </section>
-          <section>
-            About
-          </section>
-        </div>
-        <div class="fd-c ai-c">
-          <section class="pb-16">Login</section>
-          <section class="button-sb"> Register </section>
-        </div>
+         </div>
+
+
+         <section class="ai-c" id="open-menu-button">
+            <img class="display-sm" src="images/icon-menu.svg">
+         </section>
       </div>
-    </div>
-  </div>
+      <div id="mobile-main" class="main">
+         <div class="banner">
+            <img class="banner-img display-sm" src="images/image-hero-mobile.png">
+            <img class="display-lg" src="images/image-hero-desktop.png">
+         </div>
+         <div>
+            <div class="main-body jc-c">
+               <div class="main-body-spacer">
+                  <section class="jc-c font-h pb-16 main-header">
+                     Make remote work
+                  </section>
+                  <section class="jc-c textalign pb-24">
+                     Get your team in sync, no matter your location. Streamline processes, create team rituals,
+                     and watch
+                     productivity soar.
+                  </section>
+                  <section class="jc-c">
+                     <button class="jc-c ai-c h-48 w-136 button-b">Learn more</button>
+                  </section>
+               </div>
+            </div>
+            <div class="fd-r jc-sb h-26 footer">
+               <img class="databiz" src="images/client-databiz.svg">
+               <img class="audiophile" src="images/client-audiophile.svg">
+               <img class="meet" src="images/client-meet.svg">
+               <img class="maker" src="images/client-maker.svg">
+            </div>
+         </div>
+      </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a target="_blank" href="https://samuelbae.netlify.app">Samuel Bae</a>.
-  </div>
+      <div id="mobile-sidebar" class="overlay invisible">
+         <div class="sidebar">
+            <div id="close-menu-button" class="jc-e close-menu-button">
+               <img src="images/icon-close-menu.svg">
+            </div>
+            <div class="sidebar-menu">
+               <section id="features-button-mobile" class="fd-r">
+                  <aside class="pr-17">
+                     Features
+                  </aside>
+                  <aside>
+                     <img id="open-features-mobile" src="images/icon-arrow-down.svg">
+                     <img id="close-features-mobile" class="invisible" src="images/icon-arrow-up.svg">
+                  </aside>
+               </section>
+               <section id="features-list-mobile" class="invisible features-list">
+                  <section class="w-106 pl-1">
+                     <img class="todo-list" src="images/icon-todo.svg">
+                     <aside> Todo List </aside>
+                  </section>
+                  <section class="w-106">
+                     <img class="pr-14" src="images/icon-calendar.svg">
+                     <aside> Calendar </aside>
+                  </section>
+                  <section class="w-116 pl-3">
+                     <img class="pr-16" src="images/icon-reminders.svg">
+                     <aside> Reminders </aside>
+                  </section>
+                  <section class="w-102">
+                     <img class="pr-14" src="images/icon-planning.svg">
+                     <aside> Planning </aside>
+                  </section>
+               </section>
+               <section id="company-button-mobile" class="fd-r">
+                  <aside class="pr-16">
+                     Company
+                  </aside>
+                  <aside>
+                     <img id="open-company-mobile" src="images/icon-arrow-down.svg">
+                     <img id="close-company-mobile" class="invisible" src="images/icon-arrow-up.svg">
+                  </aside>
+               </section>
+               <section id="company-list-mobile" class="invisible company-list">
+                  <section>History</section>
+                  <section>Our Team</section>
+                  <section>Blog</section>
+               </section>
+               <section>
+                  Careers
+               </section>
+               <section>
+                  About
+               </section>
+            </div>
+            <div class="fd-c ai-c">
+               <section class="pb-16">Login</section>
+               <section class="button-sb"> Register </section>
+            </div>
+         </div>
+      </div>
+   </div>
 
-  <script>
-    const openMenu = document.getElementById('open-menu-button')
-    const closeMenu = document.getElementById('close-menu-button')
-    const mobileMain = document.getElementById('mobile-main')
-    const mobileSidebar = document.getElementById('mobile-sidebar')
+   <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a target="_blank" href="https://samuelbae.netlify.app">Samuel Bae</a>.
+   </div>
 
-    const featuresList = document.getElementById('features-list')
-    const featuresButton = document.getElementById('features-button')
-    const openFeatures = document.getElementById('open-features')
-    const closeFeatures = document.getElementById('close-features')
+   <script>
+      const openMenu = document.getElementById('open-menu-button')
+      const closeMenu = document.getElementById('close-menu-button')
+      const mobileMain = document.getElementById('mobile-main')
+      const mobileSidebar = document.getElementById('mobile-sidebar')
 
-    const companyList = document.getElementById('company-list')
-    const companyButton = document.getElementById("company-button")
-    const openCompany = document.getElementById('open-company')
-    const closeCompany = document.getElementById('close-company')
+      const featuresListMobile = document.getElementById('features-list-mobile')
+      const featuresButtonMobile = document.getElementById('features-button-mobile')
+      const openFeaturesMobile = document.getElementById('open-features-mobile')
+      const closeFeaturesMobile = document.getElementById('close-features-mobile')
 
-    openMenu.addEventListener("click", () => {
-      mobileSidebar.classList.remove('invisible')
-    })
+      const companyListMobile = document.getElementById('company-list-mobile')
+      const companyButtonMobile = document.getElementById("company-button-mobile")
+      const openCompanyMobile = document.getElementById('open-company-mobile')
+      const closeCompanyMobile = document.getElementById('close-company-mobile')
 
-    closeMenu.addEventListener('click', () => {
-      mobileSidebar.classList.add('invisible')
-    })
+      openMenu.addEventListener("click", () => {
+         mobileSidebar.classList.remove('invisible')
+      })
 
-    featuresButton.addEventListener('click', () => {
-      if(featuresList.classList.contains("invisible")) {
-        featuresList.classList.remove('invisible')
-        openFeatures.classList.add('invisible')
-        closeFeatures.classList.remove('invisible')
-      } else {
-        featuresList.classList.add('invisible')
-        openFeatures.classList.remove('invisible')
-        closeFeatures.classList.add('invisible')
-      }
-    })
+      closeMenu.addEventListener('click', () => {
+         mobileSidebar.classList.add('invisible')
+      })
 
-    companyButton.addEventListener('click', () => {
-      if(companyList.classList.contains("invisible")) {
-        companyList.classList.remove('invisible')
-        openCompany.classList.add('invisible')
-        closeCompany.classList.remove('invisible')
-      } else {
-        companyList.classList.add('invisible')
-        openCompany.classList.remove('invisible')
-        closeCompany.classList.add('invisible')
+      featuresButtonMobile.addEventListener('click', () => {
+         if (featuresListMobile.classList.contains("invisible")) {
+            featuresListMobile.classList.remove('invisible')
+            openFeaturesMobile.classList.add('invisible')
+            closeFeaturesMobile.classList.remove('invisible')
+         } else {
+            featuresListMobile.classList.add('invisible')
+            openFeaturesMobile.classList.remove('invisible')
+            closeFeaturesMobile.classList.add('invisible')
+         }
+      })
 
-      }
-    })
+      companyButtonMobile.addEventListener('click', () => {
+         if (companyListMobile.classList.contains("invisible")) {
+            companyListMobile.classList.remove('invisible')
+            openCompanyMobile.classList.add('invisible')
+            closeCompanyMobile.classList.remove('invisible')
+         } else {
+            companyListMobile.classList.add('invisible')
+            openCompanyMobile.classList.remove('invisible')
+            closeCompanyMobile.classList.add('invisible')
 
-  </script>
+         }
+      })
+
+
+      const featuresListDesktop = document.getElementById('features-list-desktop')
+      const featuresButtonDesktop = document.getElementById('features-button-desktop')
+      const openFeaturesDesktop = document.getElementById('open-features-desktop')
+      const closeFeaturesDesktop = document.getElementById('close-features-desktop')
+
+      const companyListDesktop = document.getElementById('company-list-desktop')
+      const companyButtonDesktop = document.getElementById("company-button-desktop")
+      const openCompanyDesktop = document.getElementById('open-company-desktop')
+      const closeCompanyDesktop = document.getElementById('close-company-desktop')
+
+      featuresButtonDesktop.addEventListener('click', () => {
+         if (featuresListDesktop.classList.contains("invisible")) {
+            featuresListDesktop.classList.remove('invisible')
+            openFeaturesDesktop.classList.add('invisible')
+            closeFeaturesDesktop.classList.remove('invisible')
+         } else {
+            featuresListDesktop.classList.add('invisible')
+            openFeaturesDesktop.classList.remove('invisible')
+            closeFeaturesDesktop.classList.add('invisible')
+         }
+      })
+
+      companyButtonDesktop.addEventListener('click', () => {
+         if (companyListDesktop.classList.contains("invisible")) {
+            companyListDesktop.classList.remove('invisible')
+            openCompanyDesktop.classList.add('invisible')
+            closeCompanyDesktop.classList.remove('invisible')
+         } else {
+            companyListDesktop.classList.add('invisible')
+            openCompanyDesktop.classList.remove('invisible')
+            closeCompanyDesktop.classList.add('invisible')
+
+         }
+      })
+
+   </script>
 </body>
 
 </html>

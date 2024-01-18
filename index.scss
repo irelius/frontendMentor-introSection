@@ -1,315 +1,467 @@
 // Template
 :root {
-    --almost-white: #FAFAFA;
-    --light-grey: #ADADAD;
-    --medium-grey: #686868;
-    --black: #151515;
-    --blue: #726CEE;
-    --turquoise: #4BB1DA;
-    --yellow: #EDD556;
-    --purple: #8E4CB6;
-    --white: #FFFFFF;
+   --almost-white: #FAFAFA;
+   --light-grey: #ADADAD;
+   --medium-grey: #686868;
+   --black: #151515;
+   --blue: #726CEE;
+   --turquoise: #4BB1DA;
+   --yellow: #EDD556;
+   --purple: #8E4CB6;
+   --white: #FFFFFF;
 
-    --343: 343px;
-    --80: 80px;
-    --28: 28px;
-    --26: 26px;
-    --18: 18px;
-    --16: 16px;
-    --14: 14px;
+   --343: 343px;
+   --80: 80px;
+   --28: 28px;
+   --26: 26px;
+   --18: 18px;
+   --16: 16px;
+   --14: 14px;
 
-    --medium: 400;
-    --bold: 700;
+   --medium: 400;
+   --bold: 700;
 }
 
 // Flex directions
 $flex-directions: (
-    "r": "row",
-    "c": "column",
+   "r": "row",
+   "c": "column",
 );
 
 @each $key, $value in $flex-directions {
-    .fd-#{$key} {
-        display: flex;
-        flex-direction: #{$value};
-    }
+   .fd-#{$key} {
+      display: flex;
+      flex-direction: #{$value};
+   }
 }
 
 // justify contents
 $justify-contents: (
-    "sb": "space-between",
-    "c": "center",
-    "s": "start",
-    "e": "end"
+   "sb": "space-between",
+   "c": "center",
+   "s": "start",
+   "e": "end"
 );
 
 @each $key, $value in $justify-contents {
-    .jc-#{$key} {
-        display: flex;
-        justify-content: #{$value};
-    }
+   .jc-#{$key} {
+      display: flex;
+      justify-content: #{$value};
+   }
 }
 
 // align items
 $align-items: (
-    "c": "center",
-    "s": "start",
-    "e": "end"
+   "c": "center",
+   "s": "flex-start",
+   "e": "flex-end"
 );
 
 @each $key, $value in $align-items {
-    .ai-#{$key} {
-        display: flex;
-        align-items: #{$value};
-    }
+   .ai-#{$key} {
+      display: flex;
+      align-items: #{$value};
+   }
 }
 
-$width: 343, 136, 116, 106, 102;
+$width: 343, 136, 116, 106, 103, 102, 93, 89;
 
 @each $width in $width {
-    .w-#{$width} {
-        width: #{$width}px;
-    }
+   .w-#{$width} {
+      width: #{$width}px;
+   }
 }
 
 $height: 26, 48;
 
 @each $height in $height {
-    .h-#{$height} {
-        height: #{$height}px;
-    }
+   .h-#{$height} {
+      height: #{$height}px;
+   }
+}
+
+$padding-top: 21, 32, 34;
+
+@each $pt in $padding-top {
+   .pt-#{$pt} {
+      padding-top: #{$pt}px;
+   }
 }
 
 $padding-bottom: 16, 24, 48;
 
 @each $pb in $padding-bottom {
-    .pb-#{$pb} {
-        padding-bottom: #{$pb}px;
-    }
+   .pb-#{$pb} {
+      padding-bottom: #{$pb}px;
+   }
 }
 
-$padding-right: 14, 16, 17;
+$padding-right: 8, 9, 14, 15, 16, 17;
 
 @each $pr in $padding-right {
-    .pr-#{$pr} {
-        padding-right: #{$pr}px;
-    }
+   .pr-#{$pr} {
+      padding-right: #{$pr}px;
+   }
 }
 
 $padding-left: 1, 3;
 
 @each $pl in $padding-left {
-    .pl-#{$pl} {
-        padding-left: #{$pl}px;
-    }
+   .pl-#{$pl} {
+      padding-left: #{$pl}px;
+   }
 }
 
 .font {
-    &-h {
-        font-size: var(--80);
-        line-height: 1;
-        font-weight: var(--bold);
-    }
+   &-h {
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 42px;
+      letter-spacing: -0.5px;
+      color: var(--black);
 
-    &-bm {
-        font-size: var(--18);
-        line-height: var(--28);
-        font-weight: var(--medium);
-    }
+      @media screen and (min-width: 1440px) {
+         font-size: var(--80);
+         line-height: 1;
+         font-weight: var(--bold);
+         letter-spacing: -1.11px;
+      }
+   }
 
-    &-bs {
-        font-size: var(--14);
-        line-height: var(--16);
-        font-weight: var(--medium);
-    }
+   &-bm {
+      font-size: var(--18);
+      line-height: var(--28);
+      font-weight: var(--medium);
+   }
 
-    &-button {
-        font-size: var(--18);
-        line-height: var(--28);
-        font-weight: var(--bold);
-    }
+   &-bs {
+      font-size: var(--14);
+      line-height: var(--16);
+      font-weight: var(--medium);
+   }
 
-    &-mh {
-        font-size: 36px;
-        font-weight: bold;
-        line-height: 42px;
-        letter-spacing: -0.5px;
-        color: var(--black);
-    }
+   &-button {
+      font-size: var(--18);
+      line-height: var(--28);
+      font-weight: var(--bold);
+      letter-spacing: -0.25px;
+   }
 }
 
 .button {
-    &-b {
-        border-radius: 15px;
-        background-color: black;
-        color: var(--almost-white);
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: -0.22px;
-        font-weight: bold;
-    }
+   &-b {
+      border-radius: 15px;
+      background-color: black;
+      color: var(--almost-white);
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: -0.22px;
+      font-weight: bold;
+   }
 
-    &-sb {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 195px;
-        height: 42px;
+   &-sb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 195px;
+      height: 42px;
 
-        border: 1.5px solid var(--medium-grey);
-        border-radius: 14px;
-    }
+      border: 1.5px solid var(--medium-grey);
+      border-radius: 14px;
+
+      @media screen and (min-width:1440px) {
+         height: 42px;
+         width: 104px;
+         margin-left: 40px;
+      }
+   }
 }
 
 // Core css
 body {
-    font-family: "Epilogue", sans-serif;
-    font-size: var(--16);
-    line-height: var(--26);
-    font-weight: var(--medium);
-    color: var(--medium-grey);
+   font-family: "Epilogue", sans-serif;
+   font-size: var(--16);
+   line-height: var(--26);
+   font-weight: var(--medium);
+   color: var(--medium-grey);
 }
 
 .base {
-    width: 100%;
-    height: 100%;
+   width: 100%;
+   height: 100%;
+}
+
+.main {
+   display: flex;
+   flex-direction: column;
+
+   @media screen and (min-width: 1440px) {
+      display: flex;
+      justify-content: center;
+      flex-direction: row-reverse;
+      padding-top: 130px;
+   }
+
+   &-body {
+      width: 100%;
+
+      @media screen and (min-width:1440px) {
+         display: flex;
+         justify-content: start;
+
+         width: 540px;
+         margin: 104px 125px 108px 0px;
+      }
+
+      &-spacer {
+         width: 343px;
+      }
+   }
+}
+
+.main-body-spacer>section {
+   width: 540px;
+   background-color: orange;
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+   margin: 16px 16px 24px 16px;
+   height: 35px;
 
-    margin: 16px 16px 24px 16px;
-    height: 35px;
+   @media screen and (min-width: 1440px) {
+      margin: 0px;
+   }
+
+   &-header {
+      align-items: flex-end;
+
+      @media screen and (min-width: 1440px) {
+         align-items: center;
+         width: 100%;
+         padding: 32.07px 40px 0px 41.26px;
+      }
+   }
+
+   &-options {
+      @media screen and (min-width: 1440px) {
+         gap: 40px;
+      }
+   }
+}
+
+.logo {
+   @media screen and (min-width: 1440px) {
+      padding-right: 62.24px;
+      padding-top: 32px;
+   }
 }
 
 .banner {
-    height: 281.25px;
-    width: 375px;
-    margin-bottom: 47.75px;
+   display: flex;
+   justify-content: center;
+}
+
+.banner-img {
+   height: 281.25px;
+   width: 375px;
+   margin-bottom: 47.75px;
+}
+
+.display-sm {
+   @media screen and (min-width: 1440px) {
+      display: none;
+   }
+}
+
+.display-lg {
+   max-height: 640px;
+
+   @media screen and (max-width: 1440px) {
+      display: none;
+   }
 }
 
 .footer {
-    padding: 0px 16px 0px 16px;
+   margin: 48px 16px 0px 16px;
 }
 
 
 .overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 99;
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.75);
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   z-index: 99;
+   height: 100vh;
+   width: 100vw;
+   background-color: rgba(0, 0, 0, 0.75);
 }
 
 .sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 100;
-    width: 240px;
-    height: 100vh;
-    background-color: var(--white);
-}
+   position: fixed;
+   top: 0;
+   right: 0;
+   z-index: 100;
+   width: 240px;
+   height: 100vh;
+   background-color: var(--white);
 
-.sidebar-menu {
-    display: flex;
-    flex-direction: column;
-    padding: 78px 117px 32px 24px;
-    gap: 16px;
+   &-menu {
+      display: flex;
+      flex-direction: column;
+      padding: 78px 117px 32px 24px;
+      gap: 16px;
+
+   }
 }
 
 .features-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 16px;
-    width: 119px;
-    padding: 8px 0px 8px 23px;
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   gap: 16px;
+   width: 119px;
+   padding: 8px 0px 8px 23px;
+
+   &-desktop {
+      position: absolute;
+      margin-top: 70px;
+      left: 113px;
+
+      height: 160px;
+      width: 153px;
+
+      border-radius: 10px;
+   }
+
+   &-spacer {
+      @media screen and (min-width:1440px) {
+         display: flex;
+         justify-content: space-between;
+
+         height: 112px;
+         width: 105px;
+      }
+   }
 }
 
 .features-list>section {
-    display: flex;
-    flex-direction: row;
+   display: flex;
+   flex-direction: row;
 }
 
+
 .todo-list {
-    padding-right: 15.5px;
+   padding-right: 15.5px;
 }
 
 .company-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 2px 0px 8px 24px;
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   padding: 2px 0px 8px 24px;
+
+   &-desktop {
+      position: absolute;
+      margin-top: 70px;
+      left: 306px;
+
+      height: 128px;
+      width: 116px;
+
+      border-radius: 10px;
+   }
+
+   &-spacer {
+      @media screen and (min-width:1440px) {
+         display: flex;
+         gap: 16px;
+
+         padding-left: 24px;
+
+         height: 112px;
+         width: 105px;
+      }
+   }
 }
 
 
 .features-list>section>img {
-    height: 20px;
+   height: 20px;
 }
 
 .close-menu-button {
-    position: fixed;
-    top: 21.98px;
-    right: 19.98px;
+   position: fixed;
+   top: 21.98px;
+   right: 19.98px;
 }
 
 .databiz {
-    width: 81.25px;
-    height: 14.36px;
+   width: 81.25px;
+   height: 14.36px;
 }
 
 .audiophile {
-    height: 26px;
-    width: 52.87px;
+   height: 26px;
+   width: 52.87px;
 }
 
 .meet {
-    height: 14.36px;
-    width: 64.14px;
+   height: 14.36px;
+   width: 64.14px;
 }
 
 .maker {
-    height: 17.23px;
-    width: 58.9px;
+   height: 17.23px;
+   width: 58.9px;
 }
 
 // standards
 .invisible {
-    display: none;
+   display: none;
+}
+
+.drop-shadow {
+   @media screen and (min-width: 1440px) {
+      box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1491);
+   }
+}
+
+.pointer:hover {
+   cursor: pointer;
+   color: var(--black);
+}
+
+.button-pointer:hover {
+   border: 1.5px solid black;
 }
 
 .textalign {
-    &-c {
-        text-align: center;
-    }
+   text-align: center;
+
+   @media screen and (min-width: 1440px) {
+      text-align: left;
+   }
 }
 
 // test background css
 .booba {
-    background-color: orange;
+   background-color: orange;
 }
-
-
 
 // Default Frontend mentor CSS
 .attribution {
-    font-size: 11px;
-    text-align: center;
-    position: fixed;
-    z-index: 1;
-    justify-content: center;
-    bottom: 3px;
-    left: 0;
-    right: 0;
+   font-size: 11px;
+   text-align: center;
+   position: fixed;
+   z-index: 1;
+   justify-content: center;
+   bottom: 3px;
+   left: 0;
+   right: 0;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+   color: hsl(228, 45%, 44%);
 }
